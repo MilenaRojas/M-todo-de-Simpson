@@ -51,3 +51,20 @@ resultado_h = simpson_double_integral(f_h, a_h, b_h, m_h, n_h, c_h, d_h);
 disp('Resultado para el ejercicio 3(h):');
 disp(resultado_h);
 
+% Ejercicio 13
+% Definir la función f(x, y) para el ejercicio 13
+f_13 = @(x, y) sqrt(1 + (x.^2 + y.^2) ./ (9 - x.^2 - y.^2));
+
+% Definir los límites de integración
+a_13 = 0;
+b_13 = 1;
+m_13 = 8; % Debe ser par
+n_13 = 8; % Debe ser par
+c_13 = @(x) 0; % Límite inferior para y
+d_13 = @(x) 1; % Límite superior para y
+
+% Calcular la integral
+resultado_13 = simpson_double_integral(f_13, a_13, b_13, m_13, n_13, c_13, d_13);
+disp('Resultado del área para el ejercicio 13:');
+disp(resultado_13);
+
